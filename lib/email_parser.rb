@@ -6,7 +6,7 @@ class EmailAddressParser
     end 
 
     def parse 
-        string_no_commas = emails.tr(",", "")
+        string_no_commas = emails.delete(",")
         emailArray = string_no_commas.split(" ")
         emailArray.uniq  
     end 
